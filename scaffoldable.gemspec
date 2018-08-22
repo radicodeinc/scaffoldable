@@ -7,9 +7,9 @@ require "scaffoldable/version"
 Gem::Specification.new do |s|
   s.name        = "scaffoldable"
   s.version     = Scaffoldable::VERSION
-  s.authors     = ["Daigo Ishii"]
-  s.email       = ["ishii.daigo@gmail.com"]
-  s.homepage    = "http://example.com"
+  s.authors     = ["Yuki Kotera"]
+  s.email       = ["kotera@radicode.co.jp"]
+  s.homepage    = "http://radicode.co.jp/"
   s.summary     = "Summary of Scaffoldable."
   s.description = "Description of Scaffoldable."
   s.license     = "MIT"

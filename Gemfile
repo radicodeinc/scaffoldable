@@ -16,5 +16,5 @@ gemspec
 
 gem "rspec-rails"
 gem "kaminari"
-gem "ransack"
+gem "ransack", "~> 1.8.8"
 gem "active_type"

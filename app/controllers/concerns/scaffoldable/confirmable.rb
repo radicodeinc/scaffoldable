@@ -9,13 +9,13 @@ module Scaffoldable
     end
 
     def model_instance_create
-      model_instance.confirming = Confirmable::CONFIRMED_BACK_KEY if back?
+      model_instance.confirming = Confirming::CONFIRMED_BACK_KEY if back?
       model_instance.save
     end
 
     def model_instance_update
       update_attributes = controller_params
-      update_attributes[:confirming] = Confirmable::CONFIRMED_BACK_KEY if back?
+      update_attributes[:confirming] = Confirming::CONFIRMED_BACK_KEY if back?
       model_instance.update(update_attributes)
     end
   end

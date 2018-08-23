@@ -29,11 +29,14 @@ module Scaffoldable
 
     def after_index
       return unless action?(:index)
-      @forms_collection = collection_model.new(
-        element_model: element_model,
-        elements: ActiveType.cast(
-          model_instances, element_model
-        ).includes(resources_includes).references(resources_references)
+      instance_variable_set(
+        "@#{collection_model.model_name.singular}".to_sym,
+        collection_model.new(
+          element_model: element_model,
+          elements: ActiveType.cast(
+            model_instances, element_model
+          ).includes(resources_includes).references(resources_references)
+        )
       )
     end
 

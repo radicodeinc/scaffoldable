@@ -15,6 +15,3 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 gem "rspec-rails"
-gem "kaminari"
-gem "ransack"
-gem "active_type"

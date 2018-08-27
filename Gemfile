@@ -14,7 +14,15 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem "rspec-rails"
+gem 'activerecord', "= #{ENV['RAILS_VERSION']}" if ENV['RAILS_VERSION']
+gem 'actionpack', "= #{ENV['RAILS_VERSION']}" if ENV['RAILS_VERSION']
+
 gem "slim-rails"
-gem "rails-controller-testing"
-gem "factory_bot_rails"
+
+group :test do
+  gem 'simplecov'
+  gem 'rspec_junit_formatter'
+  gem "rspec-rails"
+  gem "rails-controller-testing"
+  gem "factory_bot_rails"
+end

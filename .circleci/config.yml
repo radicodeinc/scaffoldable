@@ -104,6 +104,33 @@ jobs:
     working_directory: ~/scaffoldable/ruby25-rails-5.2.0
     steps: *shared_build_steps
 
+  build-ruby26-rails-5.0.7:
+    docker:
+    - image: circleci/ruby:2.6-rc
+      environment:
+        RAILS_VERSION: 5.0.7
+        ENABLE_CODE_COVERAGE: 1
+    working_directory: ~/scaffoldable/ruby25-rails-5.0.7
+    steps: *shared_build_steps
+
+  build-ruby26-rails-5.1.6:
+    docker:
+    - image: circleci/ruby:2.6-rc
+      environment:
+        RAILS_VERSION: 5.1.6
+        ENABLE_CODE_COVERAGE: 1
+    working_directory: ~/scaffoldable/ruby25-rails-5.1.6
+    steps: *shared_build_steps
+
+  build-ruby26-rails-5.2.0:
+    docker:
+    - image: circleci/ruby:2.6-rc
+      environment:
+        RAILS_VERSION: 5.2.0
+        ENABLE_CODE_COVERAGE: 1
+    working_directory: ~/scaffoldable/ruby25-rails-5.2.0
+    steps: *shared_build_steps
+
 
   upload-coverage:
     docker:
@@ -128,6 +155,9 @@ workflows:
       - build-ruby25-rails-5.0.7
       - build-ruby25-rails-5.1.6
       - build-ruby25-rails-5.2.0
+      - build-ruby26-rails-5.0.7
+      - build-ruby26-rails-5.1.6
+      - build-ruby26-rails-5.2.0
       - upload-coverage:
           requires:
           - build-ruby25-rails-5.2.0

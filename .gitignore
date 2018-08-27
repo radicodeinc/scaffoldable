@@ -9,8 +9,6 @@ spec/dummy/tmp/
 .DS_Store
 *.gem
 *.rbc
-gemfiles/*.lock
-
+Gemfile.lock
 .idea
 scaffoldable.iml
-vendor

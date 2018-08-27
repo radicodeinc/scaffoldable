@@ -68,14 +68,14 @@ shared_build_steps: &shared_build_steps
     - "*/cc-test-reporter"
 
 jobs:
-  build-ruby25-rails-4.2.9:
-    docker:
-    - image: circleci/ruby:2.5
-      environment:
-        RAILS_VERSION: 4.2.9
-        ENABLE_CODE_COVERAGE: 1
-    working_directory: ~/scaffoldable/ruby25-rails-4.2.9
-    steps: *shared_build_steps
+#  build-ruby25-rails-4.2.9:
+#    docker:
+#    - image: circleci/ruby:2.5
+#      environment:
+#        RAILS_VERSION: 4.2.9
+#        ENABLE_CODE_COVERAGE: 1
+#    working_directory: ~/scaffoldable/ruby25-rails-4.2.9
+#    steps: *shared_build_steps
 
   build-ruby25-rails-5.0.7:
     docker:
@@ -124,7 +124,7 @@ workflows:
   version: 2
   test:
     jobs:
-      - build-ruby25-rails-4.2.9
+#      - build-ruby25-rails-4.2.9
       - build-ruby25-rails-5.0.7
       - build-ruby25-rails-5.1.6
       - build-ruby25-rails-5.2.0

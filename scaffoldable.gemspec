@@ -20,8 +20,8 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^(test|spec)/})
   s.require_paths = ["lib"]
 
-  s.add_dependency "rails", ">= 4.2.0", "< 5.3"
-  s.add_dependency "ransack"
+  s.add_dependency "rails", ">= 5.0.0", "< 5.3"
+  s.add_dependency "ransack", "1.8.8"
   s.add_dependency "kaminari"
   s.add_dependency "active_type"
 

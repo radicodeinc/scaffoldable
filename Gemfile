@@ -15,3 +15,6 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 gem "rspec-rails"
+gem "slim-rails"
+gem "rails-controller-testing"
+gem "factory_bot_rails"

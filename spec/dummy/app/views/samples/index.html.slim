@@ -1,0 +1,19 @@
+| index
+p= link_to "新規作成", new_sample_path
+table
+  thead
+    tr
+      th id
+      th name
+      th memo
+      th
+  tbody
+    - @samples.each do |sample|
+      tr
+        td= sample.id
+        td= sample.name
+        td= sample.memo
+        td
+          = link_to "[編集]", edit_sample_path(sample)
+          | &nbsp;
+          = link_to "[削除]", sample_path(sample), method: :delete, data: {confirm: "本当に削除してよろしいですか？"}

@@ -14,9 +14,4 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-
-gem "rails", "5.2.0"
-gem "ransack", "1.8.8"
-gem "kaminari"
-gem "active_type"
 gem "rspec-rails"

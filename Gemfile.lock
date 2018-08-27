@@ -166,8 +166,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_type
   bundler (~> 1.3)
+  kaminari
+  rails (= 5.2.0)
   rake
+  ransack (= 1.8.8)
   rspec
   rspec-rails
   scaffoldable!

@@ -1,6 +1,4 @@
 # frozen_string_literal: true
-require "ransack"
-require "kaminari"
 module Scaffoldable
   module Base
     extend ActiveSupport::Concern

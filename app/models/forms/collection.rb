@@ -1,4 +1,3 @@
-require "active_type"
 module Forms
   class Collection < ActiveType::Object
     attribute :element_model

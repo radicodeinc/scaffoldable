@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 module Scaffoldable
   module Base
     extend ActiveSupport::Concern

@@ -1,3 +1,7 @@
+require "ransack"
+require "kaminari"
+require "active_type"
+
 require "scaffoldable/railtie"
 require "scaffoldable/engine"
 

@@ -1,0 +1,7 @@
+= form_for sample do |f|
+  = f.text_field :name
+  = f.text_area :memo
+  .buttons
+    = f.submit
+
+p= link_to "戻る", samples_path

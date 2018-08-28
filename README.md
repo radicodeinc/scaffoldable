@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/radicodeinc/scaffoldable.svg?style=svg)](https://circleci.com/gh/radicodeinc/scaffoldable)
+
 # Scaffoldable
 RESTfulに様々な場面で使える機能を提供します。
 

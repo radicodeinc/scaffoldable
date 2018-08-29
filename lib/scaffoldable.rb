@@ -10,14 +10,11 @@ require "scaffoldable/helpers/scaffoldable/confirmable_helper"
 require "scaffoldable/helpers/scaffoldable/form_helper"
 
 module Scaffoldable
+  # refs: https://railsguides.jp/configuring.html
+  extend ActiveSupport::Autoload
   extend ActiveSupport::Concern
 
   included do
     include Scaffoldable::Base
-  end
-
-
-  # refs: https://railsguides.jp/configuring.html
-  def self.eager_load!
   end
 end

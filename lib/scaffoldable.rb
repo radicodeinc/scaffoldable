@@ -15,4 +15,9 @@ module Scaffoldable
   included do
     include Scaffoldable::Base
   end
+
+
+  # refs: https://railsguides.jp/configuring.html
+  def self.eager_load!
+  end
 end

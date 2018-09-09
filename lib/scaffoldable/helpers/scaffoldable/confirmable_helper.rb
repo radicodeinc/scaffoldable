@@ -14,7 +14,7 @@ module Scaffoldable
       confirmable?(form.object) ? form.hidden_field(:confirming) : ""
     end
 
-    def confirmation_back_submit(form, _confirmation, params = {})
+    def confirmation_back_submit(form, params = {})
       form.button :submit, params.merge(name: "back", value: "戻る", 'data-disable-with': "戻る")
     end
   end

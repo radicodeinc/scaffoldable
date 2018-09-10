@@ -24,6 +24,8 @@ module Scaffoldable
     end
 
     def controller_params
+      # 定義されていなければ空のハッシュオブジェクトを返す
+      return {} unless respond_to?("#{model.model_name.singular}_params", true)
       send("#{model.model_name.singular}_params")
     end
 

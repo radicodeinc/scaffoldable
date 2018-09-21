@@ -111,16 +111,16 @@ module Scaffoldable
             notice: message_successfully_created
           )
         end
-        format.json { render_show status: :created, location: model_instance }
-        format.js { render_show status: :created, location: model_instance }
+        format.json { render json: model_instance, status: :ok }
+        format.js { render_succeeded_creating_by_js(status: :ok, content_type: "application/json") }
       end
     end
 
     def render_failed_creating
       respond_to do |format|
         format.html { render_new }
-        format.json { render json: model_instance.errors, status: :unprocessable_entity }
-        format.js { render json: model_instance.errors, status: :unprocessable_entity }
+        format.json { render json: model_instance.errors.full_messages, status: :unprocessable_entity }
+        format.js { render_failed_creating_by_js(status: :unprocessable_entity, content_type: "application/json") }
       end
     end
 
@@ -142,16 +142,16 @@ module Scaffoldable
             notice: message_successfully_updated
           )
         end
-        format.json { render_show status: :ok, location: model_instance }
-        format.js { render_show status: :ok, location: model_instance }
+        format.json { render json: model_instance, status: :ok }
+        format.js { render_succeeded_updating_by_js(status: :ok, content_type: "application/json") }
       end
     end
 
     def render_failed_updating
       respond_to do |format|
         format.html { render_edit }
-        format.json { render json: model_instance.errors, status: :unprocessable_entity }
-        format.js { render json: model_instance.errors, status: :unprocessable_entity }
+        format.json { render json: model_instance.errors.full_messages, status: :unprocessable_entity }
+        format.js { render_failed_updating_by_js(status: :unprocessable_entity, content_type: "application/json") }
       end
     end
 

@@ -251,6 +251,22 @@ module Scaffoldable
       @search_params = params.permit!.to_h[:q] if params[:q].present?
     end
 
+    def render_succeeded_creating_by_js(options)
+      head options[:status]
+    end
+
+    def render_failed_creating_by_js(options)
+      head options[:status]
+    end
+
+    def render_succeeded_updating_by_js(options)
+      head options[:status]
+    end
+
+    def render_failed_updating_by_js(options)
+      head options[:status]
+    end
+
     def authorize(showing_record)
       # HINT: レコードの権限チェックを行う。
       # 違反しているならraiseを発生させるか、別のページへリダイレクトさせる

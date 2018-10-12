@@ -35,6 +35,7 @@ module Scaffoldable
     end
 
     def edit
+      after_edit
       render_edit
     end
 

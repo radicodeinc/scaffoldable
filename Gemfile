@@ -20,7 +20,7 @@ gem 'actionpack', "= #{ENV['RAILS_VERSION']}" if ENV['RAILS_VERSION']
 gem "slim-rails"
 
 group :test do
-  gem 'simplecov'
+  gem 'simplecov', '~> 0.10', '< 0.18'
   gem 'rspec_junit_formatter'
   gem "rspec-rails"
   gem "rails-controller-testing"

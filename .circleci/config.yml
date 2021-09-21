@@ -41,7 +41,7 @@ shared_build_steps: &shared_build_steps
     name: Running Tests
     command: |
       mkdir /tmp/test-results
-      TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
+      TEST_FILES="$(circleci tests glob "spec/controllers/**/*_spec.rb" | circleci tests split --split-by=timings)"
 
       bundle exec rspec --format progress \
                         --format RspecJunitFormatter \

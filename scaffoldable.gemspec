@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency "rails", ">= 5.0.0", "< 5.3"
-  s.add_dependency "ransack", "1.8.8"
+  s.add_dependency "ransack", ">= 2.0.0", "< 3.0.0"
   s.add_dependency "kaminari"
   s.add_dependency "active_type"
 

@@ -25,5 +25,5 @@ group :test do
   gem "rspec-rails"
   gem "rails-controller-testing"
   gem "factory_bot_rails"
-  gem 'sqlite3'
+  gem 'sqlite3', "~> 1.3.6"
 end

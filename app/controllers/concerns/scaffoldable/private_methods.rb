@@ -80,6 +80,8 @@ module Scaffoldable
 
     def after_new; end
 
+    def after_edit; end
+
     def set_model_instance
       instance = find_model_instance
       return if instance.nil?
